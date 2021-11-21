@@ -1,42 +1,37 @@
 import styled from 'styled-components';
 
-export const ViewDiv = styled.div`
-    border: 2px solid black;
-    margin: 30px 220px;
+export const OuterDiv = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
-`
-
-export const ViewRow = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    margin: 0px 15%;
 `
 
 export const RowDiv = styled.div`
-    border-right: ${props => props.rightmost ? 'none' : '2px solid black'};
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    border: 2px solid black;
+    border-bottom: ${props => props.isBottom ? '2px solid black' : 'none'};
+    justify-content: space-evenly;
+`
+export const PairDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    border-right: ${props => props.rightmost ? 'none' : '2px solid black'};
+    justify-content: center;
+    width: 100%;    
 `
 
-export const FieldName = styled.h1`
-    margin-left: 15px;
-    margin-right: 15px;
-`
-
-export const FieldCharName = styled.p`
-    width: 400px;
+export const NameField = styled.div`
+    border-bottom: ${props => props.isPaired ? '2px solid black' : 'none'};
     font-size: 30px;
+    font-weight: bold;
+    padding: 5px 10px;
     text-align: center;
-    margin: 0px;
-    padding: 23px 0px;
 `
 
-export const FieldCharRace = styled.p`
-    width: 200px;
+export const ContentField = styled.div`
     font-size: 30px;
+    padding: 10px 10px;
     text-align: center;
-    margin: 0px;
-    padding: 23px 0px;
 `

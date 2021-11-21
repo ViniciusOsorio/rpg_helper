@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import { Title } from './AppStyled';
 import CharList from './Components/CharList/CharList';
 import CharCreate from './Components/CharCreate/CharCreate';
+import CharView from './Components/CharView/CharView';
 import Navbar from './Components/Navbar/Navbar';
 import TestGet from './Components/TestGet/TestGet';
 import TestPost from './Components/TestPost/TestPost';
@@ -22,6 +23,7 @@ class App extends Component {
           <Switch>
             <Route exact path = "/" component={CharList}/>
             <Route exact path = "/create" component={CharCreate}/>
+            <Route exact path = "/view" component={CharView}/>
             <Route exact path = "/testGet" component={TestGet}/>
             <Route exact path = "/testPost" component={TestPost}/>
             <Route exact path = "/testPut" component={TestPut}/>
